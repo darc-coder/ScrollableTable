@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    transition: all 0.5s ease-out;
+}
+
+body {
+    height: 100vh;
+    background: black;
+}
+
+.table-box {
+    position: relative;
+}
+
+table {
+    display: inline-flex;
+    flex-direction: column;
+    max-height: 200px;
+    overflow: scroll;
+}
+
+.hidden {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.top, .bottom {
+    position: absolute;
+    background: linear-gradient(0deg, transparent, black);
+    height: 60px;
+    width: 100%;
+    z-index: 3;
+    opacity: 1;
+    transition: opacity 5.5s ease-out;
+}
+
+.bottom {
+    bottom: 10px;
+    background: linear-gradient(180deg, transparent, black);
+}
+
+tr {
+    height: 20px;
+}
+
+table tr:visible {
+    background: white;
+}
+
+td {
+    height: 20px;
+    width: 50px;
+    text-align: center;
+}
+
+/* Custom Scroll Bar Start*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #55f;
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #55a;
+}
+
+/* Custom Scroll Bar End*/
